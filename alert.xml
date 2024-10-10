@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><alertContent>
+    <AlertDefinitions>
+        <AlertDefinition adapterKind="CustomCertificateAdapter" disableInBasePolicy="true" id="AlertDefinition-c8878fd8-6b2e-452e-95a3-64bee3d153ae" name="Certificate is about to expire" resourceKind="CustomCertificate" subType="18" type="15">
+            <State severity="automatic">
+                <SymptomSets operator="or">
+                    <SymptomSet applyOn="self" operator="and" ref="SymptomDefinition-4247162d-3509-4dad-8ec0-05b9581e4333"/>
+                    <SymptomSet applyOn="self" operator="and" ref="SymptomDefinition-e0083e9e-4f56-426a-bb82-557af16cdb75"/>
+                    <SymptomSet applyOn="self" operator="and" ref="SymptomDefinition-211991e3-e4da-40c7-bf2b-2f8bdf9de0e1"/>
+                </SymptomSets>
+                <Impact key="health" type="badge"/>
+            </State>
+        </AlertDefinition>
+    </AlertDefinitions>
+    <SymptomDefinitions>
+        <SymptomDefinition adapterKind="CustomCertificateAdapter" disableInBasePolicy="true" id="SymptomDefinition-e0083e9e-4f56-426a-bb82-557af16cdb75" name="Condition_5f85818d-3b4e-4db6-8f75-f567c1c17341" resourceKind="CustomCertificate" symptomDefType="condition_self">
+            <State severity="immediate">
+                <Condition key="daysToExpiry" operator="&lt;" thresholdType="static" type="metric" value="60.0" valueType="numeric"/>
+            </State>
+        </SymptomDefinition>
+        <SymptomDefinition adapterKind="CustomCertificateAdapter" disableInBasePolicy="true" id="SymptomDefinition-4247162d-3509-4dad-8ec0-05b9581e4333" name="Condition_c1bca83a-5dd3-4e7d-bd0c-e5c3aa92639c" resourceKind="CustomCertificate" symptomDefType="condition_self">
+            <State severity="warning">
+                <Condition key="daysToExpiry" operator="&lt;=" thresholdType="static" type="metric" value="90.0" valueType="numeric"/>
+            </State>
+        </SymptomDefinition>
+        <SymptomDefinition adapterKind="CustomCertificateAdapter" disableInBasePolicy="true" id="SymptomDefinition-211991e3-e4da-40c7-bf2b-2f8bdf9de0e1" name="Condition_1020f7f3-ccbc-41ff-8120-b7c9367e37c1" resourceKind="CustomCertificate" symptomDefType="condition_self">
+            <State severity="critical">
+                <Condition key="daysToExpiry" operator="&lt;=" thresholdType="static" type="metric" value="30.0" valueType="numeric"/>
+            </State>
+        </SymptomDefinition>
+    </SymptomDefinitions>
+</alertContent>
