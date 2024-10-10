@@ -3,6 +3,13 @@ A simple utility for monitoring certificate expiration with VCF Operaions.
 
 Pulls certificates from a list of URLs and reports their names and expiration time to VCF Operations.
 
+Typical use case is to run it on a daily basis using some scheduler, such as cron.
+
+## VCF Ops resource
+* Resource type: CustomCertificate
+* Properties: name - Certificate subject
+* Metrics: daysToExiry - Number of days before certificate expires
+
 ## Usage
 ``bash
 python -c <configfile>
