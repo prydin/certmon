@@ -1,7 +1,7 @@
 ops_host: "10.60.0.160"
 ops_username: "admin"
 ops_auth_source: "LOCAL"
-ops_password: "VMware123!"
+ops_password: "***"
 
 sites:
   - www.google.com
