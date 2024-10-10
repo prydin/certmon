@@ -1,0 +1,10 @@
+ops_host: "10.60.0.160"
+ops_username: "admin"
+ops_auth_source: "LOCAL"
+ops_password: "VMware123!"
+
+sites:
+  - www.google.com
+  - broadcom.com
+  - whitehouse.gov
+  - www.vmware.com
