@@ -11,7 +11,7 @@ Typical use case is to run it on a daily basis using some scheduler, such as cro
 * Metrics: daysToExiry - Number of days before certificate expires
 
 ## Usage
-``bash
+```bash
 python -c <configfile>
 ```
 
