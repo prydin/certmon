@@ -1,4 +1,6 @@
 # CertMon
+![Dashboard](images/dashboard.png)
+
 A simple utility for monitoring certificate expiration with VCF Operaions. 
 
 Pulls certificates from a list of URLs and reports their names and expiration time to VCF Operations.
