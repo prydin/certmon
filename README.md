@@ -15,6 +15,9 @@ Typical use case is to run it on a daily basis using some scheduler, such as cro
 python -c <configfile>
 ```
 
+## Dashboard and alerts
+A simple dashboard and alert definitions are available in `dashboard.zip` and `alert.xml`.
+
 ## Sample Config File
 ```yaml
 ops_host: "10.0.0.10"       # VCF Ops Host
